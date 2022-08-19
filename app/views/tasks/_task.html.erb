@@ -1,0 +1,23 @@
+<div id="<%= dom_id task %>">
+  <p>
+    <strong>Name:</strong>
+    <%= task.name %>
+  </p>
+
+  <p>
+    <strong>Due date:</strong>
+    <%= task.Due_date %>
+  </p>
+
+
+
+  <p>
+    <strong>Status:</strong>
+    <%if task.Status == true %>
+      <%= "completed" %>
+    <%else%>
+      <%= "Pending" %>
+    <%end%>
+
+  <%# <%= link_to "Show this task", task %> 
+</div>

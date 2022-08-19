@@ -1,0 +1,30 @@
+
+
+<%# <%= render @task %>
+
+<%= render "tasks/taskCard",:task=>@task %>
+
+<table class="table table-striped">
+  <thead class="bg-light">
+    <tr>
+      <th></th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Dob</th>
+      <th></th>
+    </tr>
+  </thead>
+    <tbody>
+<% User.where(id: @task.user_no).each do |user|%>
+<tr><%= render "users/user", :user => user %>
+</tr>
+<%end%>
+</tbody>
+</table>
+
+<div>
+  <%# <%= link_to "Edit this task", edit_task_path(@task) %> 
+  <%# <%= link_to "Back to tasks", tasks_path %>
+
+  <%= button_to "Destroy this task", @task, method: :delete %>
+</div>
