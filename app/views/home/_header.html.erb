@@ -7,17 +7,44 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-        
-        <li class="nav-item">
-          <%= link_to "Users" , users_path , class: "nav-link"%>
-          <%# <a class="nav-link" href="#">Link</a> %>
-        </li>
-        
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%# <%= link_to "Users" , users_path , class: "nav-link"%> 
+            <%= link_to t('link.user_list') , users_path , class: "nav-link"%>
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
 
-        <li class="nav-item">
-          <%= link_to "Tasks" , tasks_path , class: "nav-link"%>
-          <%# <a class="nav-link" href="#">Link</a> %>
-        </li>
+          <li class="nav-item">
+            <%# <%= link_to "Tasks" , tasks_path , class: "nav-link"%> 
+            <%= link_to t('link.task_list') , tasks_path , class: "nav-link"%>
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
+
+          <li class="nav-item">
+            <%# <%= link_to "edit profile" , edit_user_registration_path , class: "nav-link"%> 
+            <%= link_to t('link.edit_profile') , edit_user_registration_path , class: "nav-link"%>           
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
+
+          <li class="nav-item">
+            <%# <%= button_to "Sign out" , destroy_user_session_path , method: :delete, class: "nav-link"%>
+            <%= button_to t('link.sign_out') , destroy_user_session_path , method: :delete, class: "nav-link"%>
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
+        <%else%>
+          <li class="nav-item">
+            <%# <%= link_to "Sign In" , new_user_session_path , class: "nav-link"%> 
+            <%= link_to  t('link.sign_in') , new_user_session_path , class: "nav-link"%>
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
+
+          <li class="nav-item">
+            <%# <%= link_to "Sign Up" , new_user_registration_path , class: "nav-link"%>
+            <%= link_to  t('link.sign_up') , new_user_registration_path , class: "nav-link"%>
+            <%# <a class="nav-link" href="#">Link</a> %>
+          </li>
+        <%end%>
+
         
     </ul>
   </div>

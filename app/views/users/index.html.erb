@@ -29,7 +29,10 @@
         <td><%= user.last_name %></td>
         <td><%= user.dob %></td>
     <%# <%= render user %> 
-      <td><%= link_to "Show this user", user %></td>
+      <td>
+      <%# <%= link_to "Show this user", user %>
+      <%= link_to t('action.show_user'), user %>
+      </td>
       </tr>
     <% end %>
   <%# </div> %>

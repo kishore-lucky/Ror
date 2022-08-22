@@ -42,6 +42,12 @@
     <% end %>
     <%# <br> %>
     <%= yield %>
+      <div class="container-fluid m-auto">
+        <br>
+          <%= link_to "English", root_path(locale: :en)%> |
+          <%= link_to "española", root_path(locale: :es)%>
+        <br>
+      </div>    
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

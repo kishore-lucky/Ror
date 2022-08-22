@@ -6,7 +6,9 @@
         <h5 class="card-title"> <%= user.first_name %>
         <%= user.last_name %> </h5>
         <p class="card-text"> <%= user.dob %> </p>
-        <%= link_to "Edit this user", edit_user_path(@user) %> 
-        <%= link_to "Back to users", users_path %>
+        <%# <%= link_to "Edit this user", edit_user_path(@user) %> 
+        <%# <%= link_to "Back to users", users_path %>
+        <%= link_to  t('action.edit_user'), edit_user_path(@user) %> 
+        <%= link_to t('action.back_user'), users_path %>
     </div>
 </div>

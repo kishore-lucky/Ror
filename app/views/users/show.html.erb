@@ -6,12 +6,12 @@
   <%if Task.where(user_no: @user.id)[0].id>0%>
 <table class="table">
   <thead>
-    <tr>
+    <%# <tr>
       <th>Task Name</th>
       <th>Due Date</th>
       <th>Status</th>
       <th></th>
-    </tr>
+    </tr> %>
   </thead>
   <tbody>
 <% Task.where(user_no: @user.id).each do |task|%>

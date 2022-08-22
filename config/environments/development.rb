@@ -13,10 +13,23 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
+
+
+  ##added
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = Rails.application.credentials.song
+  # config.action_mailer.smtp_settings = {
+  #   user_name:      'kishore.ksquare2005@gmail.com',
+  #   password:       'ogkblfatkaeurccv',
+  #   address:'smtp.gmail.com',
+  #   port: 587,
+  #   domain: 'gmail.com'
+    # authentication: 'plain',
+    # enable_starttls_auto: true
+    # ssl => true
+    # tls => true
+  # }
   
-
-  # #
-
   #
   # Enable server timing
   config.server_timing = true
@@ -43,6 +56,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -71,5 +85,5 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-
+  
 end

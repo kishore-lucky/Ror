@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    @value = 0
   end
 
   # GET /users/new
@@ -22,8 +23,8 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-    @user.first_name.capitalize!
-    @user.last_name.capitalize!
+    # @user.first_name.capitalize!
+    # @user.last_name.capitalize!
 
     respond_to do |format|
       if @user.save

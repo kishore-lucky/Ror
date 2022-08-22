@@ -1,0 +1,28 @@
+es:
+  static_content:
+    welcome: "BIENVENIDO AL SITIO WEB DE TASKLIST"
+    hello: "Hola usuaria"
+  link:
+    sign_up: "Inscribirse"
+    sign_in: "Registrarse"
+    edit_profile: "editar perfil"
+    user_list: "usuarios"
+    task_list: "tareas"
+    # new_task: "Nueva tarea"
+    sign_out: "desconectar"
+
+  action:
+    update: "Actualizar"
+    create: "Crear"
+    cancel_account: "cancelar mi cuenta"
+    back: "espalda"
+    forget_password: "¿Olvidaste tu contraseña?"
+    show_user: "Mostrar a esta usuaria"
+    show_task: "mostrar esta tarea"
+    back_user: "Volver a las usuarias"
+    back_task: "volver a las tareas"
+    create_task: "Crear tarea"
+    edit_task: "Editar esta tarea"
+    edit_user: "Editar este usuario"
+    destroy_task: "Destruye esta tarea"
+    destroy_user: "Destruir a este usuario"
