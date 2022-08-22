@@ -18,17 +18,7 @@ Rails.application.configure do
   ##added
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = Rails.application.credentials.song
-  # config.action_mailer.smtp_settings = {
-  #   user_name:      'kishore.ksquare2005@gmail.com',
-  #   password:       'ogkblfatkaeurccv',
-  #   address:'smtp.gmail.com',
-  #   port: 587,
-  #   domain: 'gmail.com'
-    # authentication: 'plain',
-    # enable_starttls_auto: true
-    # ssl => true
-    # tls => true
-  # }
+  
   
   #
   # Enable server timing
