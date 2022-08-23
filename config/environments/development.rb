@@ -17,7 +17,7 @@ Rails.application.configure do
 
   ##added
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = Rails.application.credentials.song
+  config.action_mailer.smtp_settings = Rails.application.credentials.use_cred
   
   
   #

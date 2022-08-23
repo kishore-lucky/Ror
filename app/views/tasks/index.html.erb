@@ -26,7 +26,7 @@
     <% @tasks.each do |task| %>
             <tr>
         <td><%= task.name %></td>
-        <td><%= task.Due_date %></td>
+        <td><%= task.due_date %></td>
         <td>
         <%if task.Status == true %>
           <%= "completed" %>

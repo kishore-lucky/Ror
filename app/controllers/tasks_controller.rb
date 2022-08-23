@@ -82,6 +82,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:name, :Due_date, :Status , :user_no)
+      params.require(:task).permit(:name, :due_date, :Status , :user_no)
     end
 end
