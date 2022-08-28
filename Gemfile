@@ -46,6 +46,12 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # gem "sassc-rails"
 #i18
 gem 'rails-i18n', '~> 7.0', '>= 7.0.5'
+#rufus scheduler
+gem 'rufus-scheduler', '~> 3.8', '>= 3.8.2'
+
+#for pdf using prawn gem
+gem 'prawn', '~> 2.4'
+gem 'prawn-table', '~> 0.2.2'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

@@ -12,5 +12,10 @@ class UserMailer < ApplicationMailer
         mail(to: @user.email,subject:"Task updated")
     end
     
+    def task_remainder
+        @user = params[:user]
+        @task = params[:task]
+        mail(to: @user.email,subject:"Task Remainder")
+    end
     
 end

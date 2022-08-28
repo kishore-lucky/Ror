@@ -53,3 +53,6 @@
 
 <%= link_to t('link.new_task'), new_task_path , class:"btn btn-secondary m-3" %>
 
+<%= link_to "Export as Csv", tasks_path(format: :csv) ,class:"btn btn-success m-3" %>
+
+<%= link_to "Export as Pdf", tasks_path(format: 'pdf'), class:"btn btn-success m-3" %>

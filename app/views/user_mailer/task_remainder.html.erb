@@ -1,0 +1,12 @@
+<h1>Hi <%= @user.first_name %> <%= @user.last_name %></h1>
+<h2>Sorry, your task is pending</h2>
+
+<p>
+<br><b>User Task Name: </b> <%= @task.name %>
+<br><b>User Task Due_date: </b> <%= @task.due_date %>
+<% if @task.Status %>
+<br><b>User Task Status: </b> Completed
+<%else%>
+<br><b>User Task Status: </b> Pending
+<%end%>
+</p>

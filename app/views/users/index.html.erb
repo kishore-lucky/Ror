@@ -1,5 +1,4 @@
 
-
 <h1>Users</h1>
 
 <%# <div id="users">
@@ -40,3 +39,7 @@
 </table>
 <br/>
 <%= link_to "New user", new_user_path , class:"btn btn-secondary m-3" %>
+
+
+<%= link_to "Export as Csv", users_path(format: :csv) ,class:"btn btn-success m-3"%>
+<%= link_to "Export as Pdf", users_path(format: 'pdf'), class:"btn btn-success m-3" %>
