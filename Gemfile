@@ -52,12 +52,19 @@ gem 'rufus-scheduler', '~> 3.8', '>= 3.8.2'
 #for pdf using prawn gem
 gem 'prawn', '~> 2.4'
 gem 'prawn-table', '~> 0.2.2'
+
+#jquery
+gem 'jquery-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'ffi', '~> 1.15', '>= 1.15.5'
+  gem 'rails-controller-testing'
 end
 
 group :development do

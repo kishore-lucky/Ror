@@ -6,7 +6,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable , :confirmable
     has_many :tasks
   
-  
+  validates:first_name,presence: true
+  validates:last_name,presence: true
+  validates:email,presence: true
   # def self.to_csv(collection)
   #   CSV.generate(col_sep: ";") do |csv|
   #     csv << attribute_names

@@ -1,6 +1,9 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[ show edit update destroy ]
-  helper_method :all
+  helper_method :test
+  skip_before_action :verify_authenticity_token, only:  %i[update  create]
+
+
   # GET /tasks or /tasks.json
   def index
     @tasks = Task.all
@@ -47,7 +50,7 @@ class TasksController < ApplicationController
     else
     respond_to do |format|
       if @task.save
-        UserMailer.with(user: @user,task: @task).task_assigned.deliver_now
+        # UserMailer.with(user: @user,task: @task).task_assigned.deliver_now
         format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
@@ -63,12 +66,14 @@ end
     respond_to do |format|
       if @task.update(task_params)
         @user = User.find_by_id(@task.user_no)
-        UserMailer.with(user: @user,task: @task).task_updated.deliver_now
+        # UserMailer.with(user: @user,task: @task).task_updated.deliver_now
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
+        format.js
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -80,6 +85,7 @@ end
     respond_to do |format|
       format.html { redirect_to tasks_url, notice: "Task was successfully destroyed." }
       format.json { head :no_content }
+      format.js   { render :layout => false }
     end
   end
 
